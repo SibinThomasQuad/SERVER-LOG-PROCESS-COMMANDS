@@ -1,9 +1,8 @@
 # SERVER-LOG-PROCESS-COMMANDS
 
-#NGINX
-
-  visiting ip adrress in a specific url
-              awk -F\" '($2 ~ "/admin/login"){print $1}' access.log | awk '{print $1}' | sort | uniq -c | sort -r
+# NGINX
+visiting ip adrress in a specific url
+    awk -F\" '($2 ~ "/admin/login"){print $1}' access.log | awk '{print $1}' | sort | uniq -c | sort -r
 
   Most requested urls
               awk -F\" '{print $2}' access.log | awk '{print $2}' | sort | uniq -c | sort -r
