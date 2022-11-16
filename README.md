@@ -36,23 +36,34 @@ We can also check from which source IP you are 404 request are coming .
 
 # APACHE
 
-> awk '{print $1}' combined_log         # requester ip address (%h)
-> awk '{print $2}' combined_log         # (%l) (the virtualhost being requested)
-> awk '{print $3}' combined_log         # userid (%u) (if basic auth was used)
-> awk '{print $4,5}' combined_log       # date/time (%t)
-> awk '{print $6}' combined_log         # Request Type (GET, POST, etc..)
-> awk '{print $7}' combined_log         # URL Requested (/about, or /blog or /xmlrpc.php) etc
-> awk '{print $8}' combined_log         # HTTP version 
-
-> awk '{print $9}' combined_log         # status code (%>s)
-> awk '{print $10}' combined_log        # size (%b)
-
-> awk '{print $11}' combined_log        # http referer 
-> awk '{print $12}' combined_log        # User Agent
-
-> awk -F\" '{print $2}' combined_log    # request line (%r)
-> awk -F\" '{print $4}' combined_log    # referer
-> awk -F\" '{print $6}' combined_log    # user agent
+requester ip address (%h)
+> awk '{print $1}' combined_log        
+(%l) (the virtualhost being requested)
+> awk '{print $2}' combined_log         
+userid (%u) (if basic auth was used)
+> awk '{print $3}' combined_log        
+date/time (%t)
+> awk '{print $4,5}' combined_log       
+Request Type (GET, POST, etc..)
+> awk '{print $6}' combined_log         
+URL Requested (/about, or /blog or /xmlrpc.php) etc
+> awk '{print $7}' combined_log     
+HTTP version 
+> awk '{print $8}' combined_log
+status code (%>s)
+> awk '{print $9}' combined_log         
+ size (%b)
+> awk '{print $10}' combined_log       
+http referer 
+> awk '{print $11}' combined_log  
+User Agent
+> awk '{print $12}' combined_log
+request line (%r)
+> awk -F\" '{print $2}' combined_log
+referer
+> awk -F\" '{print $4}' combined_log
+user agent
+> awk -F\" '{print $6}' combined_log
 
 
 Summarize the response codes
