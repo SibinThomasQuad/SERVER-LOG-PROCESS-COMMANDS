@@ -59,3 +59,11 @@ awk '{print $9}' combined_log | sort | uniq -c | sort -r
 
 Find the ips that are causing the most number of 403sPermalink
 awk '($9 ~ /403/)' combined_log | awk '{print $1,$7}' | uniq -c | sort -r
+
+
+DISK SPACE COMMANDS
+
+ncdu   # check the disk usage command
+
+df -h  # to check the file system spaches
+
