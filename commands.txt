@@ -67,3 +67,16 @@ ncdu   # check the disk usage command
 
 df -h  # to check the file system spaches
 
+
+
+GREP FOR FILE PROCESSING
+
+
+beginning with 46.72.177.4.
+grep "^46.72.177.4" access.log 
+
+Grep for Part of an IP Address in a Log File
+grep "46.72" access.log |more
+
+
+
