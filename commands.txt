@@ -78,5 +78,9 @@ grep "^46.72.177.4" access.log
 Grep for Part of an IP Address in a Log File
 grep "46.72" access.log |more
 
+AWK COMMAND TO FILTER LINES BY KEY WORD
+
+awk -F"\t" '/suadmin/ {print $0}' data.txt
+
 
 
